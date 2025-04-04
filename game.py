@@ -23,7 +23,8 @@ class Game:
             self.dt = min(self.clock.tick(FPS) / 1000, dt_max)
             self.update_screen()
             if self.game_over:
-                self.restart_game()
+               pygame.time.wait(4000)
+               self.restart_game()
 
     def take_action(self, action: np.ndarray): # for AI agent
         self.dt = min(self.clock.tick(FPS) / 1000, dt_max)
